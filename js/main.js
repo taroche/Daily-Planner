@@ -34,5 +34,12 @@ $("window").ready(function () {
         localStorage.setItem(key, value)
     });
 
+    for (let i = 0; i < localStorage.length; i++) {
+        for (let j = 0; j < timeArr.length; j++) {
+            if (localStorage.key(i) === timeArr[j].children().children().text()) {
+                timeArr[j].children().children().val(localStorage.getItem(JSON.parse(j + 9) + ":00"));
+            }
+        }
+    }
 
 });
