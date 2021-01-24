@@ -7,4 +7,4 @@ This is a daily planner that allows you to plan your workday by the hour. At the
 https://taroche.github.io/Daily-Planner/
 
 ##Picture
-![Image of page](./assets/image.png)
+![Image of page](./asset/image.png)
