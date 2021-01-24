@@ -12,6 +12,7 @@ const $16 = $("#sixteen");
 const $17 = $("#seventeen");
 const timeArr = [$9, $10, $11, $12, $13, $14, $15, $16, $17];
 const $saveEl = $(".save");
+const $deleteEl = $(".delete")
 
 $("window").ready(function () {
 
@@ -33,6 +34,13 @@ $("window").ready(function () {
         let value = $(this).prev().val()
         let key = $(this).prev().prev().text()
         localStorage.setItem(key, value)
+    });
+
+    $deleteEl.on("click", function (e) {
+        e.preventDefault()
+        $(this).prev().prev().val("")
+        let key = $(this).prev().prev().prev().text()
+        localStorage.removeItem(key)
     });
 
     for (let i = 0; i < localStorage.length; i++) {
