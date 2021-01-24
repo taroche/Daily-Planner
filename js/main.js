@@ -27,5 +27,12 @@ $("window").ready(function () {
         }
     }
 
+    $saveEl.on("click", function (e) {
+        e.preventDefault()
+        let value = $(this).prev().val()
+        let key = $(this).prev().prev().text()
+        localStorage.setItem(key, value)
+    });
+
 
 });
