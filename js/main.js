@@ -20,8 +20,7 @@ $("window").ready(function () {
 
     for (let i = 0; i < timeArr.length; i++) {
         if (parseInt(currentTime) > i + 9) {
-            timeArr[i].find("textarea").addClass('past')
-            timeArr[i].find("textarea", "button").attr("disabled", "disabled")
+            timeArr[i].find("textarea").addClass('past').attr("disabled", "disabled")
         } else if (parseInt(currentTime) == i + 9) {
             timeArr[i].find("textarea").addClass('present')
         } else {
