@@ -19,11 +19,11 @@ $("window").ready(function () {
 
     for (let i = 0; i < timeArr.length; i++) {
         if (parseInt(currentTime) > i + 9) {
-            timeArr[i].addClass('past')
+            timeArr[i].find("textarea").addClass('past')
         } else if (parseInt(currentTime) == i + 9) {
-            timeArr[i].addClass('present')
+            timeArr[i].find("textarea").addClass('present')
         } else {
-            timeArr[i].addClass('future')
+            timeArr[i].find("textarea").addClass('future')
         }
     }
 
