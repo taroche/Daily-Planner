@@ -12,7 +12,8 @@ const $16 = $("#sixteen");
 const $17 = $("#seventeen");
 const timeArr = [$9, $10, $11, $12, $13, $14, $15, $16, $17];
 const $saveEl = $(".save");
-const $deleteEl = $(".delete")
+const $deleteEl = $(".delete");
+const $deleteAllEl = $("#deleteAll");
 
 $("window").ready(function () {
 
@@ -50,5 +51,14 @@ $("window").ready(function () {
             }
         }
     }
+
+    $deleteAllEl.on("click", function (e) {
+        e.preventDefault()
+        for (let i = 0; i < timeArr.length; i++) {
+            timeArr[i].children().children().val("")
+            let key = timeArr[i].children().children().text()
+            localStorage.removeItem(key)
+        }
+    });
 
 });
